@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./tabela.css">
+    <title>Notebooks</title>
+
+</head>
+<body>
+    <table class="table"id="tabelaNotebooks" >
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Memória</th>
+            <th scope="col">Ssd</th>
+            <th scope="col">Total</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+     
+        </tbody>
+      </table>
+
+      <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Atualizar Notebook</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+            </div>
+            <div class="modal-body">
+                <form id="myInput">
+                    <div class="mb-3">
+                      <label for="id" class="form-label">ID</label>
+                      <input type="text" class="form-control" id="id" readonly>
+                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca">
+                       
+                      </div>
+                     <div class="mb-3">
+                        <label for="modelo" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="modelo">
+                      
+                      </div>
+                      <div class="mb-3">
+                        <label for="memoria" class="form-label">Memória</label>
+                        <input type="text" class="form-control" id="memoria">
+                        
+                      </div>
+                      <div class="mb-3">
+                        <label for="ssd" class="form-label">Ssd</label>
+                        <input type="text" class="form-control" id="ssd">
+                        
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label for="total" class="form-label">Total</label>
+                        <input type="number" class="form-control" id="total">
+                        
+                     </div>                 
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" onclick="updateUserData()">Atualizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+     <a btn btn-link href="./index.html"> Voltar</a>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</html>
