@@ -9,14 +9,18 @@
 
 </head>
 <body>
+  <h1 class="display-1">Lista De Notebooks</h1>
+   
     <table class="table"id="tabelaNotebooks" >
         <thead>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Marca</th>
             <th scope="col">Modelo</th>
+            <th scope="col">Processador</th>
             <th scope="col">Memória</th>
             <th scope="col">Ssd</th>
+            <th scope="col">Estoque</th>
             <th scope="col">Total</th>
             <th scope="col">Editar</th>
             <th scope="col">Excluir</th>
@@ -31,8 +35,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Atualizar Notebook</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+              <h5 class="modal-title">Atualizar Notebook</h5>              
             </div>
             <div class="modal-body">
                 <form id="myInput">
@@ -52,6 +55,11 @@
                       
                       </div>
                       <div class="mb-3">
+                        <label for="processador" class="form-label">Processador</label>
+                        <input type="text" class="form-control" id="processador">
+                      
+                      </div>
+                      <div class="mb-3">
                         <label for="memoria" class="form-label">Memória</label>
                         <input type="text" class="form-control" id="memoria">
                         
@@ -60,6 +68,9 @@
                         <label for="ssd" class="form-label">Ssd</label>
                         <input type="text" class="form-control" id="ssd">
                         
+                      </div> <div class="mb-3">
+                        <label for="estoque" class="form-label">Estoque</label>
+                        <input type="text" class="form-control" id="estoque">                      
                       </div>
                       
                       <div class="mb-3">

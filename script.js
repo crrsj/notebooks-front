@@ -2,8 +2,10 @@ function enviarFormulario() {
     // Obtém os valores dos campos do formulário
     var marca = document.getElementById("marca").value;
     var modelo = document.getElementById("modelo").value;
+    var processador = document.getElementById("processador").value;
     var memoria = document.getElementById("memoria").value;
     var ssd = document.getElementById("ssd").value;
+    var estoque = document.getElementById("estoque").value;
     var total = document.getElementById("total").value;  
 
     
@@ -11,8 +13,10 @@ function enviarFormulario() {
     var dadosFormulario = {
         marca: marca,
         modelo: modelo,
+        processador: processador,
         memoria: memoria,
         ssd: ssd,
+        estoque: estoque,
         total: total       
         
     };
@@ -51,8 +55,10 @@ function exibirNotebooks() {
                 <td>${notebooks.id}</td>
                 <td>${notebooks.marca}</td>
                 <td>${notebooks.modelo}</td>
+                <td>${notebooks.processador}</td>
                 <td>${notebooks.memoria}</td>
-                <td>${notebooks.ssd}</td>               
+                <td>${notebooks.ssd}</td>  
+                <td>${notebooks.estoque}</td>   
                 <td>R$:${notebooks.total}</td>              
                 <td><button class="btn btn-warning" onClick="buscarPorId(${notebooks.id})">Editar</button></td>
                 <td><button class="btn btn-danger" onClick="deletarRegistro(${notebooks.id})">Excluir</button></td>
@@ -135,8 +141,10 @@ function exibirNotebooks() {
    document.getElementById('id').value = user.id;
    document.getElementById('marca').value = user.marca;
    document.getElementById('modelo').value = user.modelo;
+   document.getElementById('processador').value = user.processador;
    document.getElementById('memoria').value = user.memoria;
    document.getElementById('ssd').value = user.ssd;
+   document.getElementById('estoque').value = user.estoque;
    document.getElementById('total').value = user.total;
 
  }
@@ -147,8 +155,10 @@ function exibirNotebooks() {
     const idInput =  document.getElementById("id");
     const marcaInput = document.getElementById("marca");   
     const modeloInput = document.getElementById("modelo");
+    const processadorInput = document.getElementById("processador");
     const memoriaInput = document.getElementById("memoria");
     const ssdInput = document.getElementById("ssd");
+    const estoqueInput = document.getElementById("estoque");
     const totalInput = document.getElementById("total");    
       
        
@@ -156,8 +166,10 @@ function exibirNotebooks() {
     const updateId =  idInput.value    
     const updateMarca = marcaInput.value
     const updateModelo = modeloInput.value
+    const updateProcessador = processadorInput.value
     const updateMemoria = memoriaInput.value
     const updateSsd = ssdInput.value
+    const updateEstoque = estoqueInput.value
     const updateTotal = totalInput.value 
     
    
@@ -171,9 +183,11 @@ function exibirNotebooks() {
         body: JSON.stringify({
           id: updateId,
           marca: updateMarca,         
-          modelo:updateModelo ,
+          modelo: updateModelo,
+          processador: updateProcessador,
           memoria: updateMemoria,
           ssd: updateSsd,
+          estoque: updateEstoque,
           total: updateTotal,                
                     
         }),
